@@ -101,6 +101,18 @@
          to: 12;
        };
     }
+    div.col1to8 {
+       @mixin flegrix col {
+         from: 1;
+         to: 8;
+       };
+    }
+    div.col5to12 {
+       @mixin flegrix col {
+         from: 5;
+         to: 12;
+       };
+    }
 
     /* 4 col */
     div.col1to3 {
