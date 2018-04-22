@@ -20,14 +20,20 @@ const {
 
 const defaultOverwrite = require('./config/gatsby-config');
 
+// well... deep-assign would be better....
+let config = {};
+config.pathPrefix = defaultOverwrite.pathPrefix || '/doc-starter';
+config.siteMetadata = defaultOverwrite.siteMetadata || {};
+config.siteMetadata.title = defaultOverwrite.siteMetadata.title || 'signalwerk';
+
+
 module.exports = {
-  pathPrefix: defaultOverwrite.pathPrefix || '/doc-starter',
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: 'signalwerk',
+    title: config.siteMetadata.title,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-
     {
       resolve: 'gatsby-source-filesystem',
       options: {

@@ -3,8 +3,6 @@ import Link from 'gatsby-link'
 import ColumnContainer from '../ColumnContainer'
 import styles from './styles.module.css';
 
-console.log('----styles', styles);
-
 const Header = () => (
   <div className={styles.root}>
     <ColumnContainer>

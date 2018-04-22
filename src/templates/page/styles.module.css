@@ -1,1 +1,4 @@
 
+:global .header.index {
+  display: none;
+}

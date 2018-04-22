@@ -1,23 +1,57 @@
 @import '../../shared/css/variables.css';
 
+
+$maxWidth: 1040;
+$rootSpacer: 3;
+
 .root {
   margin: 0 auto;
-  width: 94%;
-  max-width: 1040px;
-  padding: 0 3%;
+  width: (100% - (2% * $rootSpacer));
+  /* max-width: calc(1px * $maxWidth); */
+  padding: 0 calc(1% * $rootSpacer);
   overflow: auto;
   /* background-color: red; */
 }
 
 .root :global .content {
-  @mixin flegrix container {
-    columns: 12;
-    debug: $flegrix-debug;
-  };
+  & > .fullwidth {
+        width: 100vw;
+        margin-left: calc(0 - (1vw * $rootSpacer));
+  }
 }
+
+
+.root :global .content {
+
+
+  div.centerColumn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: calc(1px * $maxWidth * 0.6566666); /* 8col = 65.667% */
+  }
+
+  & > {
+    h1, h2, h3, h4, h5,
+    p,
+    ul, ol,
+    hr,
+    table,
+    div.centerColumn {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: calc(1px * $maxWidth * 0.6566666); /* 8col = 65.667% */
+    }
+  }
+}
+
 
 .root :global .content .grid {
   width: 100%;
+  margin: 0 auto;
+  max-width: calc(1px * $maxWidth);
+
   @mixin flegrix container {
     columns: 12;
     debug: $flegrix-debug;
@@ -31,34 +65,7 @@
   };
 }
 
-.root :global .content .grid > *,
-.root :global .content > * {
-     @mixin flegrix col {
-       from: 1;
-       to: 12;
-     };
-}
-
-.root :global .content .grid,
-.root :global .content {
-  & > {
-    h1, h2, h3, h4, h5,
-    p,
-    ul, ol,
-    hr,
-    table,
-    div.centerColumn {
-       @mixin flegrix col {
-         push: 2;
-         from: 3;
-         to: 10;
-       };
-    }
-  }
-}
-
-.root :global .content .grid,
-.root :global .content {
+.root :global .content .grid {
   & > {
     /* 1 col */
     div.col1to12 {
@@ -67,6 +74,17 @@
          to: 12;
        };
     }
+
+
+    div.col3to10,
+    div.centerColumn {
+      @mixin flegrix col {
+        push: 2;
+        from: 3;
+        to: 10;
+      };
+    }
+
 
     /* 2 col */
     div.col1to6 {

@@ -4,6 +4,9 @@ import styles from './styles.module.css';
 import Header from '../../components/Header'
 import ColumnContainer from '../../components/ColumnContainer'
 
+const isNotBlank = str => {
+    return !(/^\s*$/.test(str));
+}
 
 export default function Template({ data, pathContext }) {
   const { markdownRemark: post } = data
@@ -11,12 +14,16 @@ export default function Template({ data, pathContext }) {
   return (
     <div className={styles.root}>
       <Helmet
-        title={`${post.frontmatter.title} – ${data.site.siteMetadata.title}`}
+        title={`${post.frontmatter.title}${isNotBlank(data.site.siteMetadata.title) ? (' – ' + data.site.siteMetadata.title) : ''}`}
       />
-      <Header />
+      <div
+        className={`header ${post.frontmatter.style}`}
+      >
+        <Header />
+      </div>
       <ColumnContainer>
         <div
-          className={'content'}
+          className={`content ${post.frontmatter.style}`}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </ColumnContainer>
@@ -36,6 +43,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        style
       }
     }
   }

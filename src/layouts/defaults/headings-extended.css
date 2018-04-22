@@ -2,7 +2,7 @@ $headings--uppercase-scale: 0.94;
 
 h1, h2, h3, h4, h5 {
 
-  &:global.line, :global .line & {
+  &:global.line, :global .headings--line & {
       padding-bottom: 0.3rem;
       border-bottom: $line--thick--screen solid black;
       @media print {
