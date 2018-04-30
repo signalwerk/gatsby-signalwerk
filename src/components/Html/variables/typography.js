@@ -1,7 +1,7 @@
 const htmlSizes = {
   default: 16,
-  m: 18,
-  l: 20,
+  m: 20,
+  l: 22,
 }
 
 const fontSizes = {
@@ -39,8 +39,8 @@ const fontSizes = {
 
 const fontNames = {
   default: {
-    sans: 'SignalwerkSans',
-    serif: 'SignalwerkSerif',
+    sans: 'DocStarterSans',
+    serif: 'DocStarterSerif',
   },
 }
 
@@ -67,7 +67,7 @@ const fontWeights = {
 const lineHeights = {
   // mobile
   default: {
-    base: 1.45, // body
+    base: 1.5, // body
   },
 }
 

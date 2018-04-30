@@ -10,7 +10,4 @@ module.exports = {
   cssMixins: {
     mixinsDir: `${__dirname}/../config/postcss/mixins/`,
   },
-  cssFunctions: {
-    glob: `${__dirname}/../config/postcss/functions/*.js`,
-  },
 }

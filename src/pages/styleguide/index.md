@@ -1,6 +1,7 @@
 ---
 title: Styleguide
 date: "2018-04-05"
+style:
 ---
 
 <div class="grid debug">
@@ -8,7 +9,7 @@ date: "2018-04-05"
     <h2 class="line">12 Column Grid</h2>
   </div>
   <div class="centerColumn">
-    <h3 class="line">Text Column</h2>
+    <h3 class="line">Center Column</h2>
   </div>
 
   <div class="grid">
@@ -180,8 +181,6 @@ h3 span.mask {
 
 
 
-
-
 This is the Ruler:
 
 <hr>
@@ -189,3 +188,29 @@ This is the Ruler:
 and thick
 
 <hr class="thick">
+
+
+## Page Styles
+there are some general page-styles.
+add to frontmatter a style-line.
+
+### No Title-Bar
+```
+style: index headings--line
+
+```
+
+### Underline on all headings
+```
+style: headings--line
+
+```
+
+
+## Full Width
+
+
+
+<div class="fullwidth responsive h60 m-h40">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.3833538486647!2d8.492635815823236!3d47.3849526791706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900bcb7d715cc5%3A0x2cf9fe2bc7f69093!2sBadenerstrasse+585%2C+8048+Z%C3%BCrich!5e0!3m2!1sen!2sch!4v1524348094322" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>

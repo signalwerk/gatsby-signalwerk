@@ -1,0 +1,34 @@
+:global {
+  .responsive {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+  }
+
+  .responsive.h {
+    @for $i from 5 to 100 by 5 {
+      &$i {
+          padding-bottom: $(i)%;
+      }
+    }
+  }
+
+  @media (--breakpoint-m) {
+
+      .responsive.m-h {
+        @for $i from 5 to 100 by 5 {
+          &$i {
+              padding-bottom: $(i)%;
+          }
+        }
+      }
+  }
+
+  .responsive iframe {
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}

@@ -1,16 +1,15 @@
 @import '../Html/variables/variables.css';
+@import './containers.css';
 
 
-$maxWidth: 1040;
+$maxWidth: 55; /* rem */
 $rootSpacer: 3;
 
 .root {
   margin: 0 auto;
   width: (100% - (2% * $rootSpacer));
-  /* max-width: calc(1px * $maxWidth); */
   padding: 0 calc(1% * $rootSpacer);
   overflow: auto;
-  /* background-color: red; */
 }
 
 .root :global .content {
@@ -20,16 +19,18 @@ $rootSpacer: 3;
   }
 }
 
+div.centerColumn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: calc(1rem * $maxWidth * 0.6566666); /* 8col = 65.667% */
+}
+
+
 
 .root :global .content {
 
 
-  div.centerColumn {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: calc(1px * $maxWidth * 0.6566666); /* 8col = 65.667% */
-  }
 
   & > {
     h1, h2, h3, h4, h5,
@@ -37,20 +38,26 @@ $rootSpacer: 3;
     ul, ol,
     hr,
     table,
+    pre,
     div.centerColumn {
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-      max-width: calc(1px * $maxWidth * 0.6566666); /* 8col = 65.667% */
+      max-width: calc(1rem * $maxWidth * 0.6566666); /* 8col = 65.667% */
     }
   }
 }
 
 
+
+
+
+@media (--breakpoint-l) {
+
 .root :global .content .grid {
   width: 100%;
   margin: 0 auto;
-  max-width: calc(1px * $maxWidth);
+  max-width: calc(1rem * $maxWidth);
 
   @mixin flegrix container {
     columns: 12;
@@ -64,6 +71,8 @@ $rootSpacer: 3;
     debug: true;
   };
 }
+
+
 
 .root :global .content .grid {
   & > {
@@ -160,4 +169,7 @@ $rootSpacer: 3;
 
 
   }
+}
+
+
 }
