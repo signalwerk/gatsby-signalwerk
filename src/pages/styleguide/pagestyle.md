@@ -5,7 +5,7 @@ add to frontmatter (the header lines in the markdown file) a style-line.
 
 ### No Title-Bar
 ```
-style: index headings--line
+style: index
 
 ```
 
