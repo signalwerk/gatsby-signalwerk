@@ -12,7 +12,7 @@ menu: false
 
 <div class="heading1 centerColumn">
 
-* 18. 8. 2018
-* 18.&#8239;8.&#8239;2018
+* 18\. 8. 2018 → wrong :(
+* 18\.&#8239;8.&#8239;2018 → nice!
 
 <div>
