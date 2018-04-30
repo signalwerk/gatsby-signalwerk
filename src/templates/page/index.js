@@ -10,6 +10,7 @@ const isNotBlank = str => {
 
 export default function Template({ data, pathContext }) {
   const { markdownRemark: post } = data
+  const { menu } = data
 
   return (
     <div className={styles.root}>
@@ -19,7 +20,7 @@ export default function Template({ data, pathContext }) {
       <div
         className={`header ${post.frontmatter.style}`}
       >
-        <Header />
+        <Header menu={menu} active={post.fields.slug}/>
       </div>
       <ColumnContainer>
         <div
@@ -33,6 +34,21 @@ export default function Template({ data, pathContext }) {
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    
+    menu: allMarkdownRemark(filter: {frontmatter: {menu: {eq: true}}}) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    
     site {
       siteMetadata {
         title
@@ -40,6 +56,9 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

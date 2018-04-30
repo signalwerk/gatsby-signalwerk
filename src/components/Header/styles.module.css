@@ -1,8 +1,30 @@
 .root {
   background: rgb(211, 211, 211);
   padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding-right: 3rem;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  a:before {
+    content: '';
+  }
+
 }
+
 
 :global .header.index {
   display: none;
