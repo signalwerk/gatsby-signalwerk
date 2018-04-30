@@ -8,6 +8,14 @@ menu: false
 
 Lorem ipsum dolor sit amet, discere scriptorem mediocritatem ad duo, pri nusquam moderatius vituperata ut, reque detraxit sententiae eam et. Vix te audire torquatos, mel et etiam debet soleat. Erant gloriatur ea mel. Sea modo fierent conceptam ex, modus homero timeam ut vim. An eum putant periculis referrentur, pro et ubique inermis nostrum. Nec modus maiorum ne.
 
+<div class="centerColumn">
+
+### DIV in Text
+Lorem ipsum dolor sit amet, discere scriptorem mediocritatem ad duo, pri nusquam moderatius vituperata ut, reque detraxit sententiae eam et. Vix te audire torquatos, mel et etiam debet soleat. Erant gloriatur ea mel. Sea modo fierent conceptam ex, modus homero timeam ut vim. An eum putant periculis referrentur, pro et ubique inermis nostrum. Nec modus maiorum ne.
+
+
+</div>
+
 
 <div class="grid debug">
   <div class="col1to12">

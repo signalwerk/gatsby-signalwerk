@@ -1,7 +1,6 @@
 @import '../Html/variables/variables.css';
 @import './containers.css';
 
-
 $maxWidth: 55; /* rem */
 $rootSpacer: 3;
 
@@ -14,24 +13,12 @@ $rootSpacer: 3;
 
 .root :global .content {
   & > .fullwidth {
-        width: 100vw;
-        margin-left: calc(0 - (1vw * $rootSpacer));
+    width: 100vw;
+    margin-left: calc(0 - (1vw * $rootSpacer));
   }
 }
 
-div.centerColumn {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: calc(1rem * $maxWidth * 0.6566666); /* 8col = 65.667% */
-}
-
-
-
 .root :global .content {
-
-
-
   & > {
     h1, h2, h3, h4, h5,
     p,
@@ -39,7 +26,7 @@ div.centerColumn {
     hr,
     table,
     pre,
-    div.centerColumn {
+    .centerColumn {
       margin-left: auto;
       margin-right: auto;
       width: 100%;
@@ -48,128 +35,115 @@ div.centerColumn {
   }
 }
 
-
-
-
-
 @media (--breakpoint-l) {
+  .root :global .content .grid {
+    width: 100%;
+    margin: 0 auto;
+    max-width: calc(1rem * $maxWidth);
 
-.root :global .content .grid {
-  width: 100%;
-  margin: 0 auto;
-  max-width: calc(1rem * $maxWidth);
-
-  @mixin flegrix container {
-    columns: 12;
-    debug: $flegrix-debug;
-  };
-}
-
-.root :global .content .grid.debug {
-  @mixin flegrix container {
-    columns: 12;
-    debug: true;
-  };
-}
-
-
-
-.root :global .content .grid {
-  & > {
-    /* 1 col */
-    div.col1to12 {
-       @mixin flegrix col {
-         from: 1;
-         to: 12;
-       };
+    @mixin flegrix container {
+      columns: 12;
+      debug: $flegrix-debug;
     }
-
-
-    div.col3to10,
-    div.centerColumn {
-      @mixin flegrix col {
-        push: 2;
-        from: 3;
-        to: 10;
-      };
-    }
-
-
-    /* 2 col */
-    div.col1to6 {
-       @mixin flegrix col {
-         from: 1;
-         to: 6;
-       };
-    }
-    div.col7to12 {
-       @mixin flegrix col {
-         from: 7;
-         to: 12;
-       };
-    }
-
-    /* 3 col */
-    div.col1to4 {
-       @mixin flegrix col {
-         from: 1;
-         to: 4;
-       };
-    }
-    div.col5to8 {
-       @mixin flegrix col {
-         from: 5;
-         to: 8;
-       };
-    }
-    div.col9to12 {
-       @mixin flegrix col {
-         from: 9;
-         to: 12;
-       };
-    }
-    div.col1to8 {
-       @mixin flegrix col {
-         from: 1;
-         to: 8;
-       };
-    }
-    div.col5to12 {
-       @mixin flegrix col {
-         from: 5;
-         to: 12;
-       };
-    }
-
-    /* 4 col */
-    div.col1to3 {
-       @mixin flegrix col {
-         from: 1;
-         to: 3;
-       };
-    }
-    div.col4to6 {
-       @mixin flegrix col {
-         from: 4;
-         to: 6;
-       };
-    }
-    div.col7to9 {
-       @mixin flegrix col {
-         from: 7;
-         to: 9;
-       };
-    }
-    div.col10to12 {
-       @mixin flegrix col {
-         from: 10;
-         to: 12;
-       };
-    }
-
-
   }
-}
 
+  .root :global .content .grid.debug {
+    @mixin flegrix container {
+      columns: 12;
+      debug: true;
+    }
+  }
 
+  .root :global .content .grid {
+    & > {
+      /* 1 col */
+      div.col1to12 {
+        @mixin flegrix col {
+          from: 1;
+          to: 12;
+        }
+      }
+
+      div.col3to10,
+      div.centerColumn {
+        @mixin flegrix col {
+          push: 2;
+          from: 3;
+          to: 10;
+        }
+      }
+
+      /* 2 col */
+      div.col1to6 {
+        @mixin flegrix col {
+          from: 1;
+          to: 6;
+        }
+      }
+      div.col7to12 {
+        @mixin flegrix col {
+          from: 7;
+          to: 12;
+        }
+      }
+
+      /* 3 col */
+      div.col1to4 {
+        @mixin flegrix col {
+          from: 1;
+          to: 4;
+        }
+      }
+      div.col5to8 {
+        @mixin flegrix col {
+          from: 5;
+          to: 8;
+        }
+      }
+      div.col9to12 {
+        @mixin flegrix col {
+          from: 9;
+          to: 12;
+        }
+      }
+      div.col1to8 {
+        @mixin flegrix col {
+          from: 1;
+          to: 8;
+        }
+      }
+      div.col5to12 {
+        @mixin flegrix col {
+          from: 5;
+          to: 12;
+        }
+      }
+
+      /* 4 col */
+      div.col1to3 {
+        @mixin flegrix col {
+          from: 1;
+          to: 3;
+        }
+      }
+      div.col4to6 {
+        @mixin flegrix col {
+          from: 4;
+          to: 6;
+        }
+      }
+      div.col7to9 {
+        @mixin flegrix col {
+          from: 7;
+          to: 9;
+        }
+      }
+      div.col10to12 {
+        @mixin flegrix col {
+          from: 10;
+          to: 12;
+        }
+      }
+    }
+  }
 }
