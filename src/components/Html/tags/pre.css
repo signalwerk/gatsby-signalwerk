@@ -1,0 +1,8 @@
+pre {
+  padding: 1.3rem;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: rgb(246, 248, 250);
+  border-radius: 3px;
+}

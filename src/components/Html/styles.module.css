@@ -17,3 +17,5 @@
 @import "./tags/table-extended.css";
 @import "./tags/small.css";
 @import "./tags/toc.css";
+@import "./tags/code.css";
+@import "./tags/pre.css";
