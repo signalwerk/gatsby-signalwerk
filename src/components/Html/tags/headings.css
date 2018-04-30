@@ -28,27 +28,27 @@ h3, h4, h5 {
 }
 
 
-h1 {
+h1, .heading1 {
   @mixin scontecss {
     font-size: $.fontSize.h1;
   }
 }
-h2 {
+h2, .heading2 {
   @mixin scontecss {
     font-size: $.fontSize.h2;
   }
 }
-h3 {
+h3, .heading3 {
   @mixin scontecss {
     font-size: $.fontSize.h3;
   }
 }
-h4 {
+h4, .heading4 {
   @mixin scontecss {
     font-size: $.fontSize.h4;
   }
 }
-h5 {
+h5, .heading5 {
   @mixin scontecss {
     font-size: $.fontSize.h5;
   }
