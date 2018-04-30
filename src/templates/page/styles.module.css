@@ -1,6 +1,9 @@
 .root {
-  :global .content {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+}
+.header {
+  background: rgb(211, 211, 211);
+}
+.content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

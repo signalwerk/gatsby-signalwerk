@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 import Header from '../../components/Header'
 import ColumnContainer from '../../components/ColumnContainer'
 
 const isNotBlank = str => {
-    return !(/^\s*$/.test(str));
+  return !/^\s*$/.test(str)
 }
 
 export default function Template({ data, pathContext }) {
@@ -15,27 +15,32 @@ export default function Template({ data, pathContext }) {
   return (
     <div className={styles.root}>
       <Helmet
-        title={`${post.frontmatter.title}${isNotBlank(data.site.siteMetadata.title) ? (' – ' + data.site.siteMetadata.title) : ''}`}
+        title={`${post.frontmatter.title}${
+          isNotBlank(data.site.siteMetadata.title)
+            ? ' – ' + data.site.siteMetadata.title
+            : ''
+        }`}
       />
-      <div
-        className={`header ${post.frontmatter.style}`}
-      >
-        <Header menu={menu} active={post.fields.slug}/>
+      <div className={styles.header}>
+        <div className={`header ${post.frontmatter.style}`}>
+          <Header menu={menu} active={post.fields.slug} />
+        </div>
       </div>
-      <ColumnContainer>
-        <div
-          className={`content ${post.frontmatter.style}`}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </ColumnContainer>
+      <div className={styles.content}>
+        <ColumnContainer>
+          <div
+            className={`content ${post.frontmatter.style}`}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </ColumnContainer>
+      </div>
     </div>
   )
 }
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    
-    menu: allMarkdownRemark(filter: {frontmatter: {menu: {eq: true}}}) {
+    menu: allMarkdownRemark(filter: { frontmatter: { menu: { eq: true } } }) {
       edges {
         node {
           id
@@ -48,7 +53,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    
+
     site {
       siteMetadata {
         title
