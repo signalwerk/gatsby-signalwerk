@@ -11,9 +11,9 @@ usage:
 */
 
 const postcss = require("postcss");
-var Scontecss = require("./module/scontecss");
-var config = require("../typography");
-var breakpoints = require("../breakpoints");
+var Scontecss = require("scontecss/scontecss");
+var config = require("../../../src/components/Html/variables/typography");
+var breakpoints = require("../../../src/components/Html/variables/breakpoints");
 
 module.exports = (root, arg) => {
   // parse with typography

@@ -1,0 +1,19 @@
+@import "./variables/variables.css";
+
+@import "./tags/html.css";
+@import "./tags/body.css";
+@import "./tags/headings.css";
+@import "./tags/headings-extended.css";
+@import "./tags/p.css";
+@import "./tags/p-extended.css";
+@import "./tags/a.css";
+@import "./tags/a-extended.css";
+@import "./tags/lists.css";
+@import "./tags/hr.css";
+@import "./tags/hr-extended.css";
+@import "./tags/img.css";
+@import "./tags/img-extended.css";
+@import "./tags/table.css";
+@import "./tags/table-extended.css";
+@import "./tags/small.css";
+@import "./tags/toc.css";

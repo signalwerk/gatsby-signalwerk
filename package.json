@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Stefan Huber <sh@signalwerk.ch",
   "dependencies": {
+    "flegrix": "^0.1.11",
     "gatsby": "^1.9.243",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-postcss-sass": "^1.0.19",
@@ -23,7 +24,8 @@
     "postcss-nested": "1.0.1",
     "postcss-simple-vars": "^4.1.0",
     "react-helmet": "^5.2.0",
-    "require-no-cache": "^0.2.1"
+    "require-no-cache": "^0.2.1",
+    "scontecss": "^1.0.6"
   },
   "keywords": [
     "gatsby"

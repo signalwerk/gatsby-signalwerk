@@ -17,7 +17,7 @@ usage:
 
 */
 
-var Flegrix = require('./module/flegrix');
+var Flegrix = require('flegrix/flegrix');
 
 // render with debug
 var flegrix = new Flegrix();
