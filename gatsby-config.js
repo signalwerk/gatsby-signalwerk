@@ -9,13 +9,11 @@ const postCssVars = require('postcss-simple-vars')
 const postCssImport = require('postcss-import')
 const postCssForLoop = require('postcss-for')
 const postCssMixins = require('postcss-mixins')
-const postCssFunctions = require('postcss-functions')
 
 const {
   cssVariables,
   cssImport,
   cssMixins,
-  cssFunctions,
 } = require('./config/paths')
 
 const defaultOverwrite = require('./config/gatsby-config');
@@ -61,9 +59,6 @@ module.exports = {
           }),
           postCssMixins({
             mixinsDir: cssMixins.mixinsDir,
-          }),
-          postCssFunctions({
-            glob: cssFunctions.glob,
           }),
           postCssCalc(),
           postCssNext({

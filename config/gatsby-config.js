@@ -1,3 +1,6 @@
 module.exports = {
-  pathPrefix: '/doc-starter'
+  pathPrefix: '/doc-starter',
+  siteMetadata: {
+    title: "Doc-Starter",
+  },
 }
