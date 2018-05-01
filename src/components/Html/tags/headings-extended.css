@@ -4,9 +4,9 @@ h1, h2, h3, h4, h5 {
 
   &:global.line, :global .headings--line & {
       padding-bottom: 0.3rem;
-      border-bottom: $line--thick--screen solid black;
+      border-bottom: $line--thin--screen solid black;
       @media print {
-          border-bottom-width: $line--thick--print;
+          border-bottom-width: $line--thin--print;
       }
   }
 

@@ -2,7 +2,7 @@
 title: Styleguide
 date: "2018-04-05"
 style: normal
-menu: true
+menu: false
 ---
 
 ## See Topics

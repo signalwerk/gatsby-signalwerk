@@ -2,6 +2,7 @@ p, ol, ul {
 
   a:before {
     content: '→ ';
+    font-size: 0.9em;
   }
 
   // hide arrow before special links
@@ -17,13 +18,13 @@ p, ol, ul {
   }
   a[href^='http']:after {
     content: ' ↗';
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
 
   a[href]:after {
     @media print {
       content: ' ↗ (' attr(href) ')';
-      font-size: 0.7em;
+      font-size: 0.9em;
     }
   }
 }

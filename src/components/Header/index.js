@@ -10,7 +10,7 @@ const Header = ({ menu, active }) => (
       <div className="centerColumn">
           <ul>
             {(menu &&
-              menu.edges.map(item => (
+              menu.edges.sort((a, b) => a.node.frontmatter.title.localeCompare(b.node.frontmatter.title)).map(item => (
                 <li>
                   <Link
                     key={item.node.id}
@@ -19,7 +19,7 @@ const Header = ({ menu, active }) => (
                     }`}
                     to={item.node.fields.slug}
                   >
-                    {item.node.frontmatter.title}
+                    {item.node.frontmatter.title.replace(/^[0-9]*--/,'')}
                   </Link>
                 </li>
               ))) || (

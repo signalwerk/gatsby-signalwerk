@@ -14,8 +14,7 @@ li {
 ul,
 ol {
   /* list-style: none; */
-  padding-left: 0rem;
-
+  padding-left: 2em;
   margin-top: 0;
   margin-bottom: 0.6em;
 }

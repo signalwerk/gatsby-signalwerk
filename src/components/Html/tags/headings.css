@@ -8,14 +8,16 @@ h1, h2, h3, h4, h5 {
 }
 
 h1, h2 {
-    @mixin scontecss {
+    /* @mixin scontecss {
       font-weight: $.fontWeight.serif.bold;
       font-family: $.fontFamily.serif;
-    }
+    } */
     letter-spacing: .01em;
 
-    margin-top: 1.5em;
+    margin-top: 1em;
     margin-bottom: 0.6em;
+    line-height: 1.15;
+
 }
 
 h3, h4, h5 {

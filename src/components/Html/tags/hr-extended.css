@@ -1,6 +1,9 @@
 hr:global.thick {
     /* margin: 0.2rem 0; */
 
-    height: 0.5em;
+    height: $line--thick--screen;
 
+    @media print {
+      height: $line--thick--print;
+    }
 }

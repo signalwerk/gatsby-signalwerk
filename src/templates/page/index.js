@@ -15,7 +15,7 @@ export default function Template({ data, pathContext }) {
   return (
     <div className={styles.root}>
       <Helmet
-        title={`${post.frontmatter.title}${
+        title={`${post.frontmatter.title.replace(/^[0-9]*--/,'')}${
           isNotBlank(data.site.siteMetadata.title)
             ? ' – ' + data.site.siteMetadata.title
             : ''
@@ -38,9 +38,13 @@ export default function Template({ data, pathContext }) {
   )
 }
 
+// sort is somehow not working
+// sort: {fields: frontmatter___title},
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    menu: allMarkdownRemark(filter: { frontmatter: { menu: { eq: true } } }) {
+    menu: allMarkdownRemark(
+      filter: {frontmatter: {menu: {eq: true}}}
+    ) {
       edges {
         node {
           id

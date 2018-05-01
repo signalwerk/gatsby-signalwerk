@@ -1,7 +1,7 @@
 .root {
 }
 .header {
-  background: rgb(211, 211, 211);
+  background-color: black;
 }
 .content {
   margin-top: 2rem;

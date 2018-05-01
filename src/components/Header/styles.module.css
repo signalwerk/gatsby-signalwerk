@@ -1,4 +1,17 @@
+@import '../Html/variables/variables.css';
+
 .root {
+
+  @mixin scontecss {
+    font-weight: $.fontWeight.sans.bold;
+    font-family: $.fontFamily.sans;
+  }
+
+  letter-spacing: 0.03em;
+
+  color: white;
+
+
   padding-top: 0.8rem;
   padding-bottom: 0.7rem;
 
@@ -13,7 +26,7 @@
     padding: 0;
   }
   li {
-    padding-right: 3rem;
+    padding-right: 1.4rem;
     display: inline-block;
 
 
@@ -24,6 +37,9 @@
 
   a:before {
     content: '';
+  }
+  :global(a.current) {
+    color: white;
   }
 
 }
